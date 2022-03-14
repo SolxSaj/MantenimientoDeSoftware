@@ -23,6 +23,7 @@ $granTotal = 0;
 				<th>Precio de venta</th>
 				<th>Cantidad</th>
 				<th>Total</th>
+				<th>Editar</th>
 				<th>Quitar</th>
 			</tr>
 		</thead>
@@ -37,6 +38,7 @@ $granTotal = 0;
 				<td><?php echo $producto->precioVenta ?></td>
 				<td><?php echo $producto->cantidad ?></td>
 				<td><?php echo $producto->total ?></td>
+				<td><a class="btn btn-warning" href="<?php echo base_url() . "index.php/vender/modificarCantidad/" . $indice?>"><i class="fa fa-trash"></i></a></td>
 				<td><a class="btn btn-danger" href="<?php echo base_url() . "index.php/vender/quitarDelCarrito/" . $indice?>"><i class="fa fa-trash"></i></a></td>
 			</tr>
 			<?php } ?>
