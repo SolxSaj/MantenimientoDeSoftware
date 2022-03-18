@@ -12,7 +12,7 @@ $granTotal = 0;
 	<form method="post" action="<?php echo base_url() ?>index.php/vender/agregar">
 		<label for="codigo">Código de barras:</label>
 		<input autocomplete="off" autofocus class="form-control" name="codigo" required type="text" id="codigo" placeholder="Escribe el código">
-	</form>
+	</form>	
 	<br><br>
 	<table class="table table-bordered">
 		<thead>

@@ -16,6 +16,7 @@
                 <th>Fecha</th>
                 <th>Total</th>
                 <th>Detalles</th>
+                <th>Reporte</th>
                 <th>Eliminar</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                 <td><?php echo $venta->fecha ?></td>
                 <td><?php echo $venta->total ?></td>
                 <td><a class="btn btn-info" href="<?php echo base_url() . "index.php/ventas/detalle/" . $venta->id?>"><i class="fa fa-info"></i></a></td>
+                <td><a class="btn btn-warning" href="<?php echo base_url() . "index.php/ventas/generarReporte/" . $venta->id?>"><i class="fa fa-trash"></i></a></td>
                 <td><a class="btn btn-danger" href="<?php echo base_url() . "index.php/ventas/eliminar/" . $venta->id?>"><i class="fa fa-trash"></i></a></td>
             </tr>
             <?php } ?>

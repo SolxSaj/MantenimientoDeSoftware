@@ -94,14 +94,16 @@ class Vender extends CI_Controller{
         $this->session->set_userdata("carrito", $carrito);
     }
 
-    private function modificarCantidad($indice, $valor){
+    function modificarCantidad($indice, $cantidad){
         $carrito = $this->session->carrito;
         $producto = $carrito[$indice];
-        $producto->cantidad = 5;
+        $producto->cantidad = $cantidad;
         $producto->total = $producto->cantidad * $producto->precioVenta;
         $carrito[$indice] = $producto;
         $this->session->set_userdata("carrito", $carrito);
+        redirect("vender/");
     }
+
 
     public function agregar(){
         $codigoDeBarras = $this->input->post("codigo");
